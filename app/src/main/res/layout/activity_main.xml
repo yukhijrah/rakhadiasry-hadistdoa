@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
 
     <RelativeLayout
         android:id="@+id/header"
@@ -13,13 +12,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/aplikasi_doa"
+            android:text="Aplikasi Doa"
             android:textSize="30sp"
             android:textColor="@android:color/white"
-            android:layout_centerInParent="true"/>
-
+            android:layout_centerInParent="true" />
     </RelativeLayout>
-    
+
     <LinearLayout
         android:id="@+id/bottom"
         android:layout_below="@+id/header"
@@ -27,10 +25,11 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <include layout="@layout/item_doa"/>
-        <include layout="@layout/item_doa"/>
-        <include layout="@layout/item_doa"/>
-        
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lst_doa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
     </LinearLayout>
 
 </RelativeLayout>
